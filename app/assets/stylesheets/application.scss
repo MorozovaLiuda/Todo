@@ -1,0 +1,38 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.glyphicon:before { 
+	margin-right: 5px;
+	 }
+#new-project-button	{
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+}
+
+.project-panel li{
+	display: inline-block;
+}
+
+body{
+	background-image: url("");
+}
+
+#task-panel{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-style: none;
+}
+
+#project-panel{
+	margin-top: 50px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	border: 1px solid #dddddd;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}

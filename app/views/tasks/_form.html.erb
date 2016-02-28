@@ -1,0 +1,11 @@
+
+            <div class="panel panel-default" id ="task-panel">
+              <div class="panel-body">
+           
+    <%= simple_form_for :task, :url => {:action => :create}, remote: true do |f| %>
+  <%= f.input_field  :name, as: :text			 %>
+ <!-- <%= f.button :submit, value: "Add Task", class: "btn btn-success" %>-->
+<% end %>
+              </div>
+          </div>
+    </div>

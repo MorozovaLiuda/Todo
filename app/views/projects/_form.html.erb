@@ -1,0 +1,22 @@
+     <div class="panel panel-primary" id= "project-panel">
+      <div class="panel-heading">
+      <span class= "glyphicon glyphicon-calendar"> </span>
+    Enter Project's name
+      <span class= "glyphicon glyphicon-pencil"> </span>
+    &#124;
+     <span class= "glyphicon glyphicon-trash"> </span>
+</div>
+
+  <div class="panel-body" >
+  <span class= "glyphicon glyphicon-plus", style ="color:green"> </span>
+ <%= simple_form_for @project, remote: true do |f| %>
+  <%= f.input_field  :name, as: :text      %>
+  <%= f.button :submit, value: "Add Task", class: "btn btn-success" %>
+<% end %> 
+  </div>
+</div>
+ 
+</div>
+
+
+	
