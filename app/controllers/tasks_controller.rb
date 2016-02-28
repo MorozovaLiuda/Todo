@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
-	def create
-		@task = Task.create(task_params)
-	end
+  def create
+    @task = Task.create(task_params)
+  end
 
-	def edit
+  def edit
     @task = find_task_by_id
   end
 
@@ -12,17 +12,17 @@ class TasksController < ApplicationController
     @task.update(task_params)
   end
 
-	def destroy
+  def destroy
     @task = find_task_by_id.destroy
   end
 
-	private
+  private
 
-	def find_task_by_id
-		Task.find(params[:id])
-	end
+  def find_task_by_id
+    Task.find(params[:id])
+  end
 
-	def task_params
-		 params.require(:task).permit(:name, :project_id)
-	end
+  def task_params
+    params.require(:task).permit(:name, :project_id)
+  end
 end
