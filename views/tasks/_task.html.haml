@@ -1,0 +1,4 @@
+%li{id: "js-task_#{task.id}"}
+  %span{id: "js-task_#{task.id}_name"}= task.name
+  = link_to 'Edit', edit_task_path(task), remote: true
+  = link_to 'Delete', task, remote: true, method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,0 +1,22 @@
+%li{id: "js-project_#{project.id}"}
+  .panel.panel-primary
+    .panel-heading#project-panel
+      %span{id: "js-project_#{project.id}_name"}= project.name
+      %span#project-actions
+        = link_to project, remote: true, method: :delete,
+        data: { confirm: 'Are you sure?' } do
+          %i.glyphicon.glyphicon-trash
+        = link_to edit_project_path(project), remote: true do
+          %i.glyphicon.glyphicon-pencil
+
+
+
+    .panel-body
+      = simple_form_for :task, :url => tasks_url, remote: true do |f|
+        = f.hidden_field :project_id, value: project.id
+        = f.input_field :name, label: false
+        = f.submit 'Add Task', class: 'btn btn-success'
+
+
+  %ul{id: "js-project_#{project.id}_tasks"}= render project.tasks
+

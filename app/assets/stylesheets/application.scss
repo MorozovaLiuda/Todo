@@ -1,7 +1,74 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.glyphicon:before { 
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+.btn.btn-primary{
+	margin-top: 50px;
+	word-spacing: normal;
+}
+
+.glyphicon:before {
+	margin-right: 5px;
+	 }
+
+.panel.panel-primary{
+	margin-bottom: 0px;
+	margin-top: 50px;
+	border: 2px solid grey;
+	&:hover #project-actions i{
+		color: white;
+	}
+	.panel-body#panel-body{
+		background-color: #E6E6FA;
+	}
+}
+
+
+
+li{
+	list-style-type: none;
+}
+
+
+#project-actions i{
+	float: right;
+}
+
+#task-actions i{
+	float: right;
+	visibility: hidden;
+}
+
+.table{
+	margin-bottom: 0px;
+}
+
+tr:hover{
+background-color: #FFFFCC;
+#task-actions i{
+	visibility: visible;
+	}
+}
+
+
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/*
+
+span[id^=js-project_]{
+ float: right;
+}
+
+ .glyphicon:before {
 	margin-right: 5px;
 	 }
 #new-project-button	{
@@ -9,6 +76,9 @@
 	margin-bottom: 50px;
 
 }
+.panel-body{
+	border-color: #ff0000;
+	}
 
 .project-panel li{
 	display: inline-block;
@@ -36,3 +106,4 @@ body{
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
+*/

@@ -1,0 +1,16 @@
+%li{id: "js-task_#{task.id}"}
+  %table.table.table-bordered
+    %tbody
+      %tr
+        %th#checkbox
+        %td
+          %span{id: "js-task_#{task.id}_name"}= task.name
+        %td
+          %span#task-actions
+            = link_to task, remote: true, method: :delete do
+              %i.glyphicon.glyphicon-trash
+            = link_to edit_task_path(task), remote: true do
+              %i.glyphicon.glyphicon-pencil
+
+
+

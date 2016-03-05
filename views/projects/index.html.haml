@@ -1,0 +1,4 @@
+%ul#js-projects= render @projects
+= simple_form_for :project, url: projects_url, remote: true do |f|
+  = f.hidden_field :name, value: 'New TODO List'
+  = f.submit 'Add TODO List'

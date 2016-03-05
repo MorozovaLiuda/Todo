@@ -1,0 +1,10 @@
+%li{id: "js-project_#{project.id}"}
+  %span{id: "js-project_#{project.id}_name"}= project.name
+    = link_to 'Edit', edit_project_path(project), remote: true
+    = link_to 'Delete', project, remote: true, method: :delete, data: { confirm: 'Are you sure?' }
+  %div
+    %ul{id: "js-project_#{project.id}_tasks"}= render project.tasks
+    = simple_form_for :task, :url => tasks_url, remote: true do |f|
+      = f.hidden_field :project_id, value: project.id
+      = f.input :name, label: false
+      = f.submit 'Add Task'
