@@ -4,5 +4,5 @@
 = simple_form_for :project, url: projects_url, html: {class: 'col-md-6 col-md-offset-5'},
 remote: true do |f|
   = f.hidden_field :name, value: 'New TODO List'
-  = f.button :button, class: 'btn btn-primary' do
+  = f.button :button, class: 'btn btn-primary', id: '#new-project' do
     %span.glyphicon.glyphicon-plus Add TODO List

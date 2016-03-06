@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  get 'users/new'
+
   root 'projects#index'
   resources :projects
   resources :tasks
