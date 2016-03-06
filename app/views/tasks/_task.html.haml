@@ -1,9 +1,10 @@
 %li{id: "js-task_#{task.id}"}
-  %table.table.table-bordered
+  %table.table.table-bordered.table-hover
     %tbody
       %tr
-        %th#checkbox
-        %td
+        %td.col-md-1
+          %input{type: "checkbox", id: "checkbox"}
+        %td.col-md-9
           %span{id: "js-task_#{task.id}_name"}= task.name
         %td
           %span#task-actions

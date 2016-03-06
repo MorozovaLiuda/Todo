@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :find_project, only: [:edit, :update, :destroy]
+
   def index
     @projects = Project.all
   end
@@ -9,25 +11,26 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = find_project_by_id
   end
 
   def update
-    @project = find_project_by_id
     @project.update(project_params)
   end
 
   def destroy
-    @project = find_project_by_id.destroy
+    @project.destroy
   end
 
   private
 
-  def find_project_by_id
-    Project.find(params[:id])
+  def find_project
+    @project = Project.find(params[:id])
   end
 
   def project_params
     params.require(:project).permit(:name)
   end
 end
+
+
+
